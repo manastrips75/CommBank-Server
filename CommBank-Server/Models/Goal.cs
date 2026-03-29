@@ -1,15 +1,13 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-
-namespace CommBank.Models;
-
 public class Goal
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
     public string? Id { get; set; }
-
     public string? Name { get; set; }
+
+    public string? Icon { get; set; }   // 👈 ADD THIS LINE
 
     public UInt64 TargetAmount { get; set; } = 0;
 
